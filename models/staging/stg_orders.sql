@@ -7,10 +7,12 @@ select
     o.ordersellingprice,
     o.ordercostprice,
     c.customername,
+    c.customerid,
     c.segment,
     c.state,
     p.category,
     p.productname,
+    p.productid,
     p.subcategory
 
 from {{ ref("raw_orders") }} as o
